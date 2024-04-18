@@ -1,0 +1,75 @@
+.partners{
+    padding: 60px;
+    background-color: var(--color-light);
+    box-shadow: var(--shadow);
+    color: var(--color-dark);
+    border-radius: var(--border-radius);
+
+    @include mobile {
+        padding: 30px;
+    }
+
+    @include mobile-s {
+        padding: 10px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 900;
+        border-bottom: 1px solid var(--color-light-alt);
+        padding-bottom: 40px;
+        margin-bottom: 45px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 15px;
+        margin-bottom: 10px;
+
+        @include mobile-s {
+            grid-template-columns: 1fr;
+            row-gap: 15px;
+            justify-items: center;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    & > p {
+        text-align: center;
+    }
+
+    &__button {
+
+        color: var(--color-light);
+        width: 100%;
+        font-weight: 700;
+        padding: 25px 87px;
+        border-radius: var(--border-radius);
+        margin-bottom: 20px;
+        white-space: nowrap;
+
+        @include mobile {
+            padding: 20px 48px;
+        }
+    }
+
+    &__agreements {
+        @include fluid-text(16,14);
+
+        color: var(--color-dark);
+
+        @include mobile {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: underline;
+            color: var(--color-accent);
+        }
+    }
+}

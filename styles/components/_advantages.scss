@@ -1,0 +1,41 @@
+.advantages {
+    padding-bottom: 80px;
+    margin-bottom: 40px;
+
+    @include mobile {
+        margin-bottom: 60px;
+    }
+
+    @include mobile-s {
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        @include fluid-text(48,34);
+
+        max-width: 732px;
+        margin-inline:auto;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--color-dark);
+
+        span {
+            color: var(--color-accent);
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+}

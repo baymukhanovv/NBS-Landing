@@ -1,0 +1,142 @@
+.footer {
+    background-color: var(--color-dark);
+    padding-block: 70px 20px;
+
+    &__top {
+        padding-bottom: 60px;
+        display: flex;
+        border-bottom: 1px solid var(--color-dark-alt);
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: 40px;
+            text-align: center;
+            padding-bottom: 0;
+        }
+    }
+
+    &__info {
+        margin-right: 100px;
+
+        @include tablet {
+            margin-right: 30px;
+        }
+
+        @include mobile {
+            margin: 0;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 40px;
+
+        @include mobile {
+            margin-inline: auto;
+        }
+    }
+
+    &__description {
+        font-size: 13px;
+        max-width: 430px;
+
+        @include mobile {
+            margin-inline: auto;
+        }
+    }
+
+    &__links {
+        flex-shrink: 1;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 12px 21px;
+        background-color: var(--color-dark-alt);
+        margin: 0 10px 10px 10px;
+        border-radius: var(--border-radius);
+    }
+
+    &__contacts {
+        margin-left: 30px;
+        width: 300px;
+        width: 100%;
+
+        @include tablet {
+            margin-left: 20px;
+        }
+
+        @include mobile {
+            margin: 0;
+        }
+
+        &-title {
+            @include fluid-text(20, 16);
+
+            margin-bottom: 30px;
+        }
+
+        &-number {
+            @include fluid-text(32, 24);
+
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: var(--color-accent);
+            white-space: nowrap;
+        }
+
+        &-address {
+            font-style: normal;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__email {
+        margin-bottom: 40px;
+
+        a {
+            color: var(--color-accent);
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__copyright {
+        color: var(--color-gray);
+
+        @include mobile {
+            text-align: center;
+        }
+
+
+        span {
+            color: var(--color-accent);
+        }
+    }
+
+    &__privacy-policy {
+        display: flex;
+        column-gap: 40px;
+
+        @include mobile-s {
+            margin-top: 20px;
+            flex-direction: column;
+            row-gap: 10px;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: underline;
+            color: var(--color-light-alt);
+            white-space: nowrap;
+        }
+    }
+}

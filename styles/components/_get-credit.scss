@@ -1,0 +1,11 @@
+.get-credit {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    padding-block: 100px 80px;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        row-gap: 60px;
+    }
+}

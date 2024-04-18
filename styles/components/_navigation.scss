@@ -1,0 +1,119 @@
+.navigation {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        @include mobile-s {
+            padding-block: 12px;
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+
+            svg {
+                color: var(--color-accent);
+            }
+        }
+
+        a {
+            &.navigation__top-number {
+                font-size: 20px;
+            }
+
+            @include hover {
+                color: var(--color-accent);
+            }
+        }
+
+        &-buttons {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+        }
+
+        &-button {
+            text-transform: uppercase;
+            background-color: var(--color-accent);
+            font-weight: 900;
+            padding: 14px;
+            border: 1px solid var(--color-accent);
+            padding: 17px 36px;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+
+            @include mobile-s {
+                display: none;
+            }
+
+            @include hover {
+                background-color: transparent;
+                color: var(--color-accent);
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 30px;
+
+        &-list {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+            transition: all .4s;
+
+            @include mobile {
+                flex-direction: column;
+                position: absolute;
+                width: 100vw;
+                margin-left: -30px;
+                background-color: var(--color-dark);
+                padding-block: 30vh;
+                row-gap: 50px;
+                left: -9999px;
+                top: 0;
+            }
+        }
+
+        &-link {
+            position: relative;
+            padding-block: 20px;
+            transition: all .2s;
+
+            &.is-current {
+                color: var(--color-accent);
+                &::after {
+                    width: 100%;
+                }
+            }
+
+            @include hover {
+                color: var(--color-accent);
+                &::after {
+                  width: 100%;
+                }
+            }
+        
+            &::after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                translate: -50%;
+                width: 0;
+                height: 2px;
+                background-color: var(--color-accent);
+                transition-duration: inherit;
+            }
+        }
+    }
+}

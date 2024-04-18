@@ -1,0 +1,42 @@
+.form {
+    &__title {
+        @include fluid-text(47, 34);
+
+        color: var(--color-dark);
+        text-transform: uppercase;
+    }
+
+    &__area {
+        &-title {
+            font-size: 24px;
+            color: var(--color-dark);
+            margin-bottom: 40px;
+        }
+
+        label {
+            display: block;
+            color: var(--color-gray);
+            margin-block: 10px;
+        }
+
+        select,
+        input {
+            display: block;
+            width: 100%;
+            padding: 25px 31px;
+            background-color: var(--input-bg-color);
+            border: 1px solid var(--color-light-alt);
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+
+            &:focus {
+                border-color: var(--color-accent);
+            }
+        }
+
+        select {
+            border-radius: var(--border-radius);
+        }
+    }
+
+
+}

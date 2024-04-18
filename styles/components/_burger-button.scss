@@ -1,0 +1,61 @@
+.burger-button {
+    --burgerButtonBgColor: var(--color-light);
+
+    position: relative;
+    padding: 14px;
+    background-color: transparent;
+    border: 1px solid var(--burgerButtonBgColor);
+    border-radius: var(--border-radius-small);
+
+    @include hover {
+        --burgerButtonBgColor: var(--color-accent);
+    }
+
+    &::after {
+        @include abs-center;
+
+        content: '';
+        width: 18px;
+        height: 2px;
+        border-radius: var(--border-radius);
+        background-color: var(--burgerButtonBgColor);
+        box-shadow: 0 7px 0 0 var(--burgerButtonBgColor),0 -7px 0 0 var(--burgerButtonBgColor);
+    }
+}
+
+.cross-button {
+    --burgerButtonBgColor: var(--color-light);
+
+    position: relative;
+    padding: 14px;
+    background-color: transparent;
+    border: 1px solid var(--burgerButtonBgColor);
+    border-radius: var(--border-radius-small);
+    left: 42.5vw;
+
+    @include hover {
+        --burgerButtonBgColor: var(--color-accent);
+    }
+
+    &::before {
+        @include abs-center;
+
+        content: '';
+        width: 25px;
+        height: 2px;
+        rotate: 45deg;
+        border-radius: var(--border-radius);
+        background-color: var(--burgerButtonBgColor);
+    }
+
+    &::after {
+        @include abs-center;
+
+        content: '';
+        width: 25px;
+        height: 2px;
+        rotate: -45deg;
+        border-radius: var(--border-radius);
+        background-color: var(--burgerButtonBgColor);
+    }
+}

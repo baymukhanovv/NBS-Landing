@@ -1,0 +1,30 @@
+.solution-problem {
+    padding-block: 80px 100px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        @include fluid-text(48, 34);
+
+        text-transform: uppercase;
+        max-width: 750px;
+        margin-inline:auto;
+        text-align: center;
+        color: var(--color-dark);
+        margin-bottom: 80px;
+
+        @include mobile {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__button {
+        align-self: center;
+        padding: 25px 46px;
+        border-radius: var(--border-radius);
+    }
+}
